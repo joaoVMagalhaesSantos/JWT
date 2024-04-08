@@ -67,3 +67,4 @@ C:\trabSharp\JWT\EmprestimoLivros\EmprestimoLivros.API\obj\Debug\net6.0\Empresti
 C:\trabSharp\JWT\EmprestimoLivros\EmprestimoLivros.API\obj\Debug\net6.0\EmprestimoLivros.API.genruntimeconfig.cache
 C:\trabSharp\JWT\EmprestimoLivros\EmprestimoLivros.API\obj\Debug\net6.0\ref\EmprestimoLivros.API.dll
 C:\trabSharp\JWT\EmprestimoLivros\EmprestimoLivros.API\bin\Debug\net6.0\efpt.config.json
+C:\trabSharp\JWT\EmprestimoLivros\EmprestimoLivros.API\obj\Debug\net6.0\EmprestimoLivros.API.sourcelink.json

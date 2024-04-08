@@ -7,7 +7,6 @@ namespace EmprestimoLivros.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-
     public class ClienteController : Controller
     {
         private readonly IClienteRepository _clienteRepository;

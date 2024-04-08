@@ -7,8 +7,8 @@ namespace EmprestimoLivros.API.Interfaces
         void Incluir(Cliente cliente);
         void Alterar(Cliente cliente);
         void Excluir(Cliente cliente);
+        
         Task<Cliente> SelecionarByPk(int id);
-
         Task<IEnumerable<Cliente>> GetAll();
         Task<bool> SaveAllAsync();
     }
