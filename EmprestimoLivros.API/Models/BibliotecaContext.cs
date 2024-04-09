@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmprestimoLivros.API.Models;
@@ -18,9 +19,12 @@ public partial class BibliotecaContext : DbContext
     public virtual DbSet<Livro> Livros { get; set; }
 
     public virtual DbSet<LivroClienteEmprestimo> LivroClienteEmprestimos { get; set; }
+    public virtual DbSet<Usuario> Usuarios { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
         modelBuilder.Entity<Cliente>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Cliente__3213E83F4D0FA085");
@@ -34,6 +38,15 @@ public partial class BibliotecaContext : DbContext
 
             entity.Property(e => e.Id).ValueGeneratedNever();
         });
+
+        modelBuilder.Entity<Usuario>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Usuario");
+
+            entity.Property(e => e.Id).ValueGeneratedNever();
+
+        });
+        
 
         modelBuilder.Entity<LivroClienteEmprestimo>(entity =>
         {

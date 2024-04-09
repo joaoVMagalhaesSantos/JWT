@@ -1,5 +1,8 @@
-﻿using EmprestimoLivros.API.Interfaces;
+﻿using AutoMapper;
+using EmprestimoLivros.API.DTOs;
+using EmprestimoLivros.API.Interfaces;
 using EmprestimoLivros.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -10,21 +13,28 @@ namespace EmprestimoLivros.API.Controllers
     public class ClienteController : Controller
     {
         private readonly IClienteRepository _clienteRepository;
+        private readonly IMapper _mapper;
 
-        public ClienteController(IClienteRepository clienteRepository)
+        public ClienteController(IClienteRepository clienteRepository, IMapper mapper)
         {
             _clienteRepository = clienteRepository;
+            _mapper = mapper;
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Cliente>>> GetClientes()
         {
-            return Ok(await _clienteRepository.GetAll());
+            var clientes = await _clienteRepository.GetAll();
+            var clientesDTO = _mapper.Map<IEnumerable<ClienteDTO>>(clientes);
+
+            return Ok(clientesDTO);
         }
 
         [HttpPost]
-        public async Task<ActionResult> CadastrarCliente(Cliente cliente)
+        public async Task<ActionResult> CadastrarCliente(ClienteDTO clienteDTO)
         {
+            var cliente = _mapper.Map<Cliente>(clienteDTO);
             _clienteRepository.Incluir(cliente);
 
             if (await _clienteRepository.SaveAllAsync())
@@ -38,8 +48,10 @@ namespace EmprestimoLivros.API.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> AlterarCliente(Cliente cliente)
-        {   
+        public async Task<ActionResult> AlterarCliente(ClienteDTO clienteDTO)
+        {
+            var cliente = _mapper.Map<Cliente>(clienteDTO);
+
             _clienteRepository.Alterar(cliente);
 
             if (await _clienteRepository.SaveAllAsync())
@@ -83,10 +95,10 @@ namespace EmprestimoLivros.API.Controllers
             {
                 return NotFound("Cliente não encontrado");
             }
-            else
-            {
-                return Ok(cliente);
-            }
+
+            var clienteDTO = _mapper.Map<ClienteDTO>(cliente);
+
+            return Ok(clienteDTO);
         }
 
         [HttpPatch("{id_cliente}")]

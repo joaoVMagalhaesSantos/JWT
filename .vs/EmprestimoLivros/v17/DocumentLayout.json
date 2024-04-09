@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\trabSharp\\JWT\\EmprestimoLivros\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E62E1FF9-C68D-4ABE-989D-8C7F0C1DB8A3}|EmprestimoLivros.API\\EmprestimoLivros.API.csproj|c:\\trabsharp\\jwt\\emprestimolivros\\emprestimolivros.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E62E1FF9-C68D-4ABE-989D-8C7F0C1DB8A3}|EmprestimoLivros.API\\EmprestimoLivros.API.csproj|solutionrelative:emprestimolivros.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E62E1FF9-C68D-4ABE-989D-8C7F0C1DB8A3}|EmprestimoLivros.API\\EmprestimoLivros.API.csproj|c:\\trabsharp\\jwt\\emprestimolivros\\emprestimolivros.api\\controllers\\livrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E62E1FF9-C68D-4ABE-989D-8C7F0C1DB8A3}|EmprestimoLivros.API\\EmprestimoLivros.API.csproj|solutionrelative:emprestimolivros.api\\controllers\\livrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E62E1FF9-C68D-4ABE-989D-8C7F0C1DB8A3}|EmprestimoLivros.API\\EmprestimoLivros.API.csproj|c:\\trabsharp\\jwt\\emprestimolivros\\emprestimolivros.api\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E62E1FF9-C68D-4ABE-989D-8C7F0C1DB8A3}|EmprestimoLivros.API\\EmprestimoLivros.API.csproj|solutionrelative:emprestimolivros.api\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,45 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\trabSharp\\JWT\\EmprestimoLivros\\EmprestimoLivros.API\\Program.cs",
-              "RelativeDocumentMoniker": "EmprestimoLivros.API\\Program.cs",
-              "ToolTip": "C:\\trabSharp\\JWT\\EmprestimoLivros\\EmprestimoLivros.API\\Program.cs",
-              "RelativeToolTip": "EmprestimoLivros.API\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T19:46:23.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LivroController.cs",
-              "DocumentMoniker": "C:\\trabSharp\\JWT\\EmprestimoLivros\\EmprestimoLivros.API\\Controllers\\LivroController.cs",
-              "RelativeDocumentMoniker": "EmprestimoLivros.API\\Controllers\\LivroController.cs",
-              "ToolTip": "C:\\trabSharp\\JWT\\EmprestimoLivros\\EmprestimoLivros.API\\Controllers\\LivroController.cs",
-              "RelativeToolTip": "EmprestimoLivros.API\\Controllers\\LivroController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwBwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T19:37:02.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\trabSharp\\JWT\\EmprestimoLivros\\EmprestimoLivros.API\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "EmprestimoLivros.API\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\trabSharp\\JWT\\EmprestimoLivros\\EmprestimoLivros.API\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "EmprestimoLivros.API\\Controllers\\ClienteController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwB0AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T19:37:00.781Z",
-              "EditorCaption": ""
             }
           ]
         },

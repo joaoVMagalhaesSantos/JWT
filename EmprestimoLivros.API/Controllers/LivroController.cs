@@ -1,4 +1,6 @@
-﻿using EmprestimoLivros.API.Interfaces;
+﻿using AutoMapper;
+using EmprestimoLivros.API.DTOs;
+using EmprestimoLivros.API.Interfaces;
 using EmprestimoLivros.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics.CodeAnalysis;
@@ -10,21 +12,28 @@ namespace EmprestimoLivros.API.Controllers
     public class LivroController : Controller
     {
         private readonly ILivroRepository _livroRepository;
+        private readonly IMapper _mapper;
 
-        public LivroController(ILivroRepository livroRepository)
+        public LivroController(ILivroRepository livroRepository, IMapper mapper)
         {
             _livroRepository = livroRepository;
+            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Livro>>> GetLivros()
         {
-            return Ok(await _livroRepository.GetAll());
+            var livros = await _livroRepository.GetAll();
+            var livrosDTO = _mapper.Map<IEnumerable<LivroDTO>>(livros);
+
+
+            return Ok(livrosDTO);
         }
 
         [HttpPost]
-        public async Task<ActionResult> CadastrarLivro(Livro livro)
+        public async Task<ActionResult> CadastrarLivro(LivroDTO livroDTO)
         {
+            var livro = _mapper.Map<Livro>(livroDTO);
             _livroRepository.Incluir(livro);
 
             if (await _livroRepository.SaveAllAsync())
@@ -38,8 +47,9 @@ namespace EmprestimoLivros.API.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> AlterarLivro(Livro livro)
+        public async Task<ActionResult> AlterarLivro(LivroDTO livroDTO)
         {
+            var livro = _mapper.Map<Livro>(livroDTO);
             _livroRepository.Alterar(livro);
             if (await _livroRepository.SaveAllAsync())
             {
@@ -84,10 +94,10 @@ namespace EmprestimoLivros.API.Controllers
             {
                 return NotFound("Livro não encontrado");
             }
-            else
-            {
-                return Ok(livro);
-            }
+            
+            var livroDTO = _mapper.Map<LivroDTO>(livro);
+            return Ok(livroDTO);
+            
         }
 
         [HttpPatch("{id_livro}")]
